@@ -1,3 +1,5 @@
+
+
 .card_product{
     display: flex;
     flex-direction: column;
@@ -37,4 +39,22 @@
     justify-content: space-between;
     align-items: center;
 }
+.card_agregar_carrito i{
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+    background-color: none;
+    box-shadow: 0 0 15px orangered;
+}
+.index-main-card-discount {
+    background-color: red;
+    color: white;
+    padding: 2px 4px;
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    box-shadow: 0 0 15px orangered;
+}
+
 

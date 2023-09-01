@@ -10,6 +10,7 @@ const User = function ({name, apellido, email, nacimiento, color, password}) {
     this.color = color;
     this.password = hashSync(password.trim(),10);
     this.rol = "user";
+    this.record = null;
 }
 
 module.exports = User
