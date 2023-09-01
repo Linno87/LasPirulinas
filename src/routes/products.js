@@ -5,6 +5,6 @@ var router = express.Router();
 
 /* /products */
 router.get('/', products);
-router.get('/detail/:id', detail)
+router.get('/detail/:id?', detail)
 
 module.exports = router;
