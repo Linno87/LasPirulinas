@@ -1,0 +1,50 @@
+[
+    {
+      "id": "916d506a-33ef-47c5-8bb7-7b45eec84579",
+      "name": "Cocinita Pupe con accesorios",
+      "category": "cocinitas",
+      "brand": "Las Pirulinas",
+      "model": "pupe",
+      "price": 23800,
+      "discount": 15,
+      "description": "Cocinita Modelo Pupe con bajomesada",
+      "image": "cocinita_pupe.jpg",
+      "createdAt": "2023-08-25T20:20:32.425Z"
+    },
+    {
+        "id": "916d506a-33ef-47c5-8bb7-7b45eec84579",
+        "name": "Cocinita UMA con accesorios",
+        "category": "cocinitas",
+        "brand": "Las Pirulinas",
+        "model": "uma",
+        "price": 23800,
+        "discount": 15,
+        "description": "Cocinita Modelo UMA con bajomesada y estante",
+        "image": "cocinita_uma.jpeg",
+        "createdAt": "2023-08-25T20:20:32.425Z"
+    },
+    {
+        "id": "916d506a-33ef-47c5-8bb7-7b45eec84579",
+        "name": "Cocinita Pupe con accesorios",
+        "category": "cocinitas",
+        "brand": "Las Pirulinas",
+        "model": "pupe",
+        "price": 24800,
+        "discount":0,
+        "description": "Cocinita Modelo Pupe con bajomesada",
+        "image": "cocinita_pupe2.jpg",
+        "createdAt": "2023-08-25T20:20:32.425Z"
+    },
+    {
+        "id": "916d506a-33ef-47c5-8bb7-7b45eec84579",
+        "name": "Pizzas",
+        "category": "comidas",
+        "brand": "Las Pirulinas",
+        "model": "pizzas",
+        "price": 10000,
+        "discount": 10,
+        "description": "Pizza 4 porciones con accesorios",
+        "image": "pizza_1.jpg",
+        "createdAt": "2023-08-25T20:20:32.425Z"
+    }
+]

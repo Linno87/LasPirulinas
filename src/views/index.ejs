@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+ <%- include('partials/head',{title: 'Index' }) %>
+  <body style="background-color: <%= locals.userData && userData.color %>;">
+    
+    <%- include('partials/header') %>
+
+    
+    <div class="row">
+      <div class="col-12">
+          <img src="/images/cocinitas.jpeg" alt="imagen" class="img-fluid">
+      </div>
+    </div>
+    <main class="index-main">
+      <div class="row">
+        <div class="col-12 col-6 d-flex gap-3 ">
+          <% listaProductos.forEach(producto => { %>
+            <%- include('partials/cards',{
+              ...producto
+            }) %>
+          <% }) %>
+        </div>
+      </div>
+    </main>
+    <%- include('partials/footer') %>
+  </body>
+</html>

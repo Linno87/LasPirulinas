@@ -1,0 +1,40 @@
+.card_product{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    color: black;
+    width: 100%;
+}
+.card_product:hover{
+    box-shadow: 0 0 15px black;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.card_text{
+    --bs-bg-opacity: 0.2;
+    background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
+    border-radius: 2px;
+    box-shadow: 0 0 3px rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
+    padding: 4px;
+    
+}
+.card_product:hover .card_text{
+    --bs-bg-opacity: 0.5;
+    box-shadow: 0 0 15px black;
+
+}
+.card_text_description{
+    display: none;
+}
+.card_product:hover .card_text_description{
+    display: block;
+}
+
+.card_text_price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+

@@ -1,0 +1,31 @@
+<div class="card" style="width: 18rem;">
+    <img src="/images/<%= category %>/<%= image %>" class="card-img-top img-fluid h-100 w-100" alt="<%= name %>">
+    
+    
+    <div class="card-img-overlay card_product fw-semibold">
+      <% if (discount) { %>
+        <div class="index-main-card-discount "> 
+          <h5><%= discount%> % OFF</h5>
+        </div>
+      <% } %>
+      <div class="card_text">
+        <h2 class="card-title fw-medium text-black-40 w-100 "><%= name %></h2>
+        
+        <div class="card_text_description">
+            <p class="card-text"><%= description %></p>
+        </div>
+        <div class="card_text_price">
+          <% if (discount) { %>
+            <div class="d-flex justify-content-start">
+            <h3 class="text-decoration-line-through fs-5 fw-bold">$ <%= toThousand(price) %></h3>
+            <h3 class=" fs-5 fw-bold text-danger">$ <%= toThousand(price -(price * discount/100)) %></h3>
+            </div>
+            <% } else { %>
+              <h3 class=" fs-5 fw-bold text-danger">$ <%= toThousand(price) %></h3>
+            <% } %>
+          
+          <a href="prduct/detail/<%= id %>"><i class="fa-solid fa-basket-shopping fa-beat fa-lg" style="color: #e2030f;"></i></a>
+        </div>
+      </div>
+    </div>
+</div>
