@@ -3,17 +3,48 @@
     <%- include('partials/head',{title: 'Index' }) %>
     <body>
       <%- include('partials/navbarheader') %>
-      <main>
+      <main class="container mt-4">
         <div class="row">
-            <div class="col-12 col-mb-4 d-flex justify-content-between p-5 gap-4">
-                <div class="col-4">
-                    <img src="/images/cocinitas/cocinita_pupe2.jpg" class="img-fluid" alt="no carga">
-                </div>
-                <div class="col-8 col-mb-4">
-                    <div class="col-12">
-                        <%= name %>
+            <div class="card shadow">
+                <div class="col-12 col-mb-4 d-flex justify-content-center py-5 gap-2">
+                    <div class="col-3">
+                        <img src="/images/<%= category %> /<%= image %> class="img-fluid rounded-1 " alt="no carga">
                     </div>
-
+                    <div class="col-6 col-mb-4 d-flex flex-column justify-content-between align-items-center">
+                        <div class="col-12 text-center py-2">
+                            <h1><%= name %></h1>
+                        </div>
+                        <div class="col-12 text-center py-2">
+                            <p class="fs-5">
+                                <%= description %>
+                            </p>
+                        </div>
+                        <div class="col-6 py-2">
+                            <% if (discount) { %>
+                              <div class="d-flex justify-content-center gap-2">
+                              <h3 class="text-decoration-line-through fs-5 fw-bold">$ <%= toThousand(price) %></h3>
+                              <h3 class=" fs-5 fw-bold text-danger">$ <%= toThousand(price -(price * discount/100)) %></h3>
+                              </div>
+                              <% } else { %>
+                                <h3 class=" fs-5 fw-bold text-danger">$ <%= toThousand(price) %></h3>
+                              <% } %>
+                        </div>
+                        <div class="col-12 col-md-10 d-flex justify-content-center">
+                            <div class="col-5">
+                                <button class="w-60 btn btn-danger fs-6 text-center"><i class="fa-solid fa-star fa-fade" style="color: #ffed24;"></i> Añadir a favorito</button>
+                            </div>
+                            <div class="col-6">
+                                <select for="cantidad">
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</options>
+                                    <option value="3">3</options>
+                                    <option value="4">4</options>
+                                    <option value="5">5</options>
+                                </select>
+                                <button class="btn btn-danger fs-6">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
