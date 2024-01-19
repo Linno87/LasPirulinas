@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1d70121d-c94e-4151-878f-1e0e4361dcac",
+    "name": "Eva",
+    "apellido": "Bernardi",
+    "email": "aevabernardi@gmail.com",
+    "nacimiento": "1993-10-02",
+    "password": "$2a$10$oGH07s/C9bMcIeErDF0LbektT0uyEBVD5o6oT6hBh93IahNe6sbQO",
+    "rol": "user",
+    "image": null,
+    "record": null,
+    "address": "Luis salguero 1337",
+    "phone": "3425314294",
+    "description": "Acerca de mi..."
+  },
+  {
+    "id": "d52f402a-e1e0-4d38-8130-d31b5f139c36",
+    "name": "Leandro",
+    "apellido": "Gillig",
+    "email": "linno824@gmail.com",
+    "nacimiento": "1991-10-23",
+    "password": "$2a$10$DO0f.i/LYSbFnpIwhgBG4uDQIK1BmUKgZBFYTq50pvry.KnvXTdru",
+    "rol": "admin",
+    "image": null,
+    "record": null,
+    "address": null,
+    "phone": null,
+    "description": "Acerca de mi..."
+  }
+]

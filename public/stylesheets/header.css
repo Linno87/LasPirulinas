@@ -1,10 +1,16 @@
 .header{
     border-bottom: solid 1px #917868;
     background-color:  #c6a196 ;
+    height: 300px;
 }
 .color-texto{
     color: #917868;
 }
 .nav_header{
     background-color: #ecc3bc;
+}
+
+.logo_run{
+    height: 50px;
+    margin: 0 auto;
 }

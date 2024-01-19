@@ -9,4 +9,11 @@ module.exports = {
             toThousand
         });
       },
+    admin: (req,res) =>{
+        const listaProductos = leerJson('products.json');
+        res.render('admin', {
+            listaProductos,
+            toThousand
+        });
+    }
 }

@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html>
- <%- include('partials/head',{title: 'Index' }) %>
+ <%- include('partials/head',{title: 'Productos' }) %>
   <body>
-    
     <%- include('partials/header') %>
     <%- include('partials/navbarheader') %>
-
-    
-
-    <h1 class="fs-1 col-6 mx-auto p-2">PRODUCTOS DESTACADOS</h1>
     <main class="index-main">
       <div class="row">
-        <div class="col-12 col-6 d-flex gap-3 justify-content-between">
+        <div class="col-12 col-6 d-flex gap-3 ">
           <% listaProductos.forEach(producto => { %>
             <%- include('partials/cards',{
               ...producto

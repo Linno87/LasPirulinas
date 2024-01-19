@@ -1,6 +1,23 @@
+
+
 *{
     box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+.small_text{
+  font-family: "Roboto";
+  font-size:12px;
+  line-height: 8px;
+  text-align: end;
+}
+
+ul{
+  text-decoration: none;
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}

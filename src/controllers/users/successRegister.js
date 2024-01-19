@@ -7,15 +7,13 @@ module.exports = (req,res) =>{
     const errors = validationResult(req)
     
     if(errors.isEmpty()){
-        const {name, apellido, color , email} = req.body;
-        req.session.userData = {
-            name,
-            apellido,
-            color,
-            email
-        }
+        const users=leerJson('users.json')
+       
+        const user = new User(req.body)
         
-        return res.redirect('/');
+        users.push(user)
+        escribirJson(users,"users.json")
+        return res.redirect('login');
         
     }else{
         return res.render('registerUser', {
