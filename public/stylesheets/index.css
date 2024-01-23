@@ -2,3 +2,10 @@
     margin: 15px;
 }
 
+
+@media (max-width: 480px) {
+    .card_product{
+        display: block;
+        position: absolute;
+    }
+}

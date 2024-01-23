@@ -1,50 +1,137 @@
-<nav class=" nav_header navbar navbar-expand-lg">
-    <div class="container-fluid ">
-      <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
-        <ul class="navbar-nav col-5">
-          <li class="nav-item">
-            <a class="nav-link active color-texto"  href="/">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link color-texto"  href="/products">Productos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link color-texto"  href="#">Quienes somos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link color-texto" >Contacto</a>
-          </li>
-        </ul>
-        <div class="col-2">
-          <img src="/images/logo.png" class="logo_run rounded d-flex justify-content-center">
-        </div>
-        
-        <ul class="navbar-nav col-5 d-flex justify-content-end">
-              <% if (!locals.userData) { %>
-                <li class="nav-item"></li>
-                <a class="nav-link color-texto"  href="/users/registerUser">Crear cuenta</a>
+<div class="col-12 nav_phone">
+  <div class="col-6">
+  <div class="burger_icon_div col-4 d-flex justify-content-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+    <i class="fa-solid fa-bars burger_icon" id="burger_icon"></i>
+  </div>
+<div class="offcanvas_width offcanvas offcanvas-start offcanvas_width" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <div class="d-flex justify-content-between">
+      <img src="/images/logo.png" class="img-fluid">
+    </div>
+    
+  </div>
+  <div class="offcanvas-body ">
+    <% if (locals.userData) { %>
+      <p class="nav_phone_options color-texto">Hola <%= locals.userData.name %>!</p>
+    <% } %>
+    <hr>
+    <ul class="nav_phone_options">
+      <li class="nav-item">
+        <a class="nav-link active color-texto"  href="/">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link color-texto"  href="/products">Productos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link color-texto"  href="#">Quienes somos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link color-texto" >Contacto</a>
+      </li>
+      <hr>
+          <% if (!locals.userData) { %>
+            <li class="nav-item"></li>
+            <a class="nav-link color-texto"  href="/users/registerUser">Crear cuenta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link color-texto" href="/users/login">Ingresar</a>
+           </li>
+           <% } else { %>
+            
+            <li class="nav-item"></li>
+            <a class="nav-link color-texto"  href="/users/profile">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link color-texto" href="#">Carrito</a>
+           </li>
+           <li class="nav-item">
+            <a class="nav-link color-texto" href="#">Mis compras</a>
+         </li>
+         <li class="nav-item">
+          <a class="nav-link color-texto" href="#">Mis favoritos</a>
+       </li>
+            <li class="nav-item">
+              <a class="nav-link color-texto" href="/users/logout">Salir</a>
+           </li>
+            <% if (locals.userData.rol==="admin") { %>
+              <hr>
+              <li class="nav-item">
+                <a class="nav-link  color-texto" href="/admin">Administrar productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  color-texto" href="/admin">Administrar usuarios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  color-texto" href="#">Configuración</a>
+              </li>
+            <% } %>
+            
+          <% } %>
+      </ul>
+  </div>
+  <div class="d-flex justify-content-end">
+    <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i class="fa-solid fa-arrow-left fw-5"></i>
+    </button>
+  </div>
+ 
+</div>
+<div class="col-6 d-flex justify-content-center">
+  <img src="/images/logo.png" class="logo_run rounded d-flex ">
+</div>
+</div>
+</div>
+
+<nav class="nav_tab_desk navbar navbar-expand-lg">
+  <div class="container-fluid ">
+    <div class="collapse navbar-collapse col-12 d-flex justify-content-between" id="navbarNav">
+      <div class="col-5">
+      <ul class=" d-flex gap-2 p-0">
+        <li class="nav-item">
+          <a class="nav-link active color-texto"  href="/">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link color-texto"  href="/products">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link color-texto"  href="#">Quienes somos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link color-texto" >Contacto</a>
+        </li>
+      </ul>
+    </div>
+      <div class="col-2 position-relative">
+        <img src="/images/logo.png" class="logo_run rounded d-flex justify-content-center">
+      </div>
+      <div class="col-5 ">
+      <ul class=" d-flex justify-content-end gap-2">
+            <% if (!locals.userData) { %>
+              <li class="nav-item"></li>
+              <a class="nav-link color-texto"  href="/users/registerUser">Crear cuenta</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link color-texto" href="/users/login">Ingresar</a>
+             </li>
+             <% } else { %>
+              
+              <li class="nav-item"></li>
+              <a class="nav-link color-texto"  href="/users/profile">Bienvenido <%= locals.userData.name %>!</a>
+              </li>
+              <% if (locals.userData.rol==="admin") { %>
+                <li class="nav-item">
+                  <a class="nav-link  color-texto" href="/admin">Editar productos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link color-texto" href="/users/login">Ingresar</a>
-               </li>
-               <% } else { %>
-                
-                <li class="nav-item"></li>
-                <a class="nav-link color-texto"  href="/users/profile">Bienvenido <%= locals.userData.name %>!</a>
+                  <a class="nav-link  color-texto" href="#">Configuración</a>
                 </li>
-                <% if (locals.userData.rol==="admin") { %>
-                  <li class="nav-item">
-                    <a class="nav-link  color-texto" href="/admin">Editar productos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link  color-texto" href="#">Configuración</a>
-                  </li>
-                <% } %>
-                <li class="nav-item">
-                  <a class="nav-link color-texto" href="/users/logout">Salir</a>
-               </li>
               <% } %>
-          </ul>
+              <li class="nav-item">
+                <a class="nav-link color-texto" href="/users/logout">Salir</a>
+             </li>
+            <% } %>
+        </ul>
       </div>
     </div>
+  </div>
   </nav>

@@ -20,6 +20,7 @@
     border-radius: 2px;
     box-shadow: 0 0 3px rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
     padding: 4px;
+
     
 }
 .card_product:hover .card_text{
