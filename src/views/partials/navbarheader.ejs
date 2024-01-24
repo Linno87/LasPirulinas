@@ -1,6 +1,6 @@
 <div class="col-12 nav_phone">
-  <div class="col-6">
-  <div class="burger_icon_div col-4 d-flex justify-content-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+  <div class="col-3 p-2">
+  <div class="burger_icon_div col-8 d-flex justify-content-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
     <i class="fa-solid fa-bars burger_icon" id="burger_icon"></i>
   </div>
 <div class="offcanvas_width offcanvas offcanvas-start offcanvas_width" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -80,13 +80,29 @@
   <img src="/images/logo.png" class="logo_run rounded d-flex ">
 </div>
 </div>
+<div class="col-9 search_div">
+  <form class="d-flex py-2">
+    <input class="form-control mr-sm-2 " type="search" placeholder="Buscar..." aria-label="Search">
+    <button class="btn border" type="submit"><i class="fa-solid fa-magnifying-glass text-color"></i></button>
+  </form>
+</div>
 </div>
 
-<nav class="nav_tab_desk navbar navbar-expand-lg">
+
+  <div class="d-flex justify-content-end  search_desk_div">
+    <div class="col-9" >
+      <form class="d-flex py-2" id="form_search">
+        <input class="form-control search_desk_input" id="search_desk_input" type="search" placeholder="Buscar..." aria-label="Search">
+        <button class="btn border" type="submit" id="search_desk_icon"><i class="fa-solid fa-magnifying-glass text-color"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <nav class="nav_tab_desk navbar navbar-expand-lg">
   <div class="container-fluid ">
-    <div class="collapse navbar-collapse col-12 d-flex justify-content-between" id="navbarNav">
-      <div class="col-5">
-      <ul class=" d-flex gap-2 p-0">
+    <div class="collapse navbar-collapse col-12 d-flex justify-content-between"  id="navbarNav">
+      <div class="col-5 mx-1">
+      <ul class=" d-flex gap-2 justify-content-start">
         <li class="nav-item">
           <a class="nav-link active color-texto"  href="/">Inicio</a>
         </li>
@@ -105,7 +121,7 @@
         <img src="/images/logo.png" class="logo_run rounded d-flex justify-content-center">
       </div>
       <div class="col-5 ">
-      <ul class=" d-flex justify-content-end gap-2">
+      <ul class=" d-flex justify-content-end gap-2" >
             <% if (!locals.userData) { %>
               <li class="nav-item"></li>
               <a class="nav-link color-texto"  href="/users/registerUser">Crear cuenta</a>
@@ -114,24 +130,49 @@
                 <a class="nav-link color-texto" href="/users/login">Ingresar</a>
              </li>
              <% } else { %>
-              
-              <li class="nav-item"></li>
-              <a class="nav-link color-texto"  href="/users/profile">Bienvenido <%= locals.userData.name %>!</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Bienvenido <%= locals.userData.name %>!
+                </a>
+                <ul class="dropdown-menu nav_desk_options">
+                  <li class="nav-item">
+            <a class="nav-link color-texto"  href="/users/profile">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link color-texto" href="#">Carrito</a>
+           </li>
+           <li class="nav-item">
+            <a class="nav-link color-texto" href="#">Mis compras</a>
+         </li>
+         <li class="nav-item">
+          <a class="nav-link color-texto" href="#">Mis favoritos</a>
+       </li>
+            <li class="nav-item">
+              <a class="nav-link color-texto" href="/users/logout">Salir</a>
+           </li>
+                </ul>
               </li>
               <% if (locals.userData.rol==="admin") { %>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Admin
+                  </a>
+                  <ul class="dropdown-menu nav_desk_options">
                 <li class="nav-item">
-                  <a class="nav-link  color-texto" href="/admin">Editar productos</a>
+                  <a class="nav-link  color-texto align-center" href="/admin">Productos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link  color-texto" href="#">Configuración</a>
+                  <a class="nav-link  color-texto" href="/admin">Usuarios</a>
                 </li>
-              <% } %>
+                </ul>
+              </li>
               <li class="nav-item">
-                <a class="nav-link color-texto" href="/users/logout">Salir</a>
-             </li>
+                <a class="nav-link  color-texto" href="#">Configuración</a>
+              </li>
+              <% } %>
             <% } %>
         </ul>
       </div>
     </div>
   </div>
-  </nav>
+</nav>

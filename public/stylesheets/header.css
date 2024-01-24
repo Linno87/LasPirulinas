@@ -3,26 +3,19 @@
   background-color: #c6a196;
   position: relative;
 }
-.nav_phone_options{
-    
-    align-items: center;
-    padding-right: 5px;
-    padding-left: 5px;
-    font-size: 15px;
-    text-align: center;
-}
+
 .color-texto {
   color: #917868;
 }
 .burger_icon_div{
-    border: #917868 2px solid ;
-    border-radius:10px;
-    margin: 2px;
+    border: #917868 1px solid ;
+    border-radius:3px;
+    margin: auto;
     color: #917868;
 }
 .burger_icon{
-    font-size: 50px;
-    padding: 2px;
+    font-size: 35px;
+    padding: 1px;
     margin: auto;
 }
 .logo_run {
@@ -35,7 +28,13 @@
   display: flex;
   justify-content: space-between;
   background-color: #ecc3bc;
-
+}
+.nav_phone_options{
+  align-items: center;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-size: 15px;
+  text-align: center;
 }
 .nav_tab_desk {
   display: none;
@@ -46,10 +45,21 @@
     background-color: #c6a196;
     height: 100% !important;
 }
+.search_div{
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.search_desk_div{
+  display: none;
+}
 
 @media (min-width: 520px) {
   .burger_icon_div{
     width: 80px;
+    margin: 0;
+    margin-left: 10px;
   }
   .offcanvas_width{
     width: 15rem !important;}
@@ -59,6 +69,11 @@
     .logo_run {
         height: 150px;
     }
+    .search_div{
+  justify-content:end;
+  padding-right: 10px;
+  
+}
   
 }
 @media (min-width: 801px){
@@ -72,4 +87,37 @@
         height: 160px;
         top: -120px;
       }
+      .nav_desk_options{
+        align-items: center;
+        padding-right: 5px;
+        padding-left: 5px;
+        font-size: 15px;
+        text-align: center;
+        background-color: #ecc3bc;
+      }
+      .search_desk_div{
+        display: flex;
+        position: absolute;
+        top: 8px;
+        right: 50px;
+       
+      }
+      .search_desk_input{
+        opacity: 0;
+        transform: translateX(30%);
+        overflow: hidden;
+        padding: 0;
+        width: 0;
+        transition: transform 500ms ease, opacity 700ms ease;
+        
+      }
+      .search_desk_input_trans{
+        width: 100%;
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      
 }
+      
+
